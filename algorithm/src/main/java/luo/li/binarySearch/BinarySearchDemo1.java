@@ -11,24 +11,24 @@ import java.util.List;
  */
 public class BinarySearchDemo1 {
     public static void main(String[] args) {
-        List<Integer> nums = Arrays.asList(1,2,3,4,5,6,7);
+        int[] nums = new int[]{1,2,3,4,5,6,7};
         int target = 47;
         BinarySearchDemo1 binarySearchDemo1 = new BinarySearchDemo1();
         System.out.println(binarySearchDemo1.search(nums,target));
     }
 
-    int search(List<Integer> nums, int target) {
-        return BinarySearch(nums,target,0,nums.size()-1);
+    int search(int[] nums, int target) {
+        return BinarySearch(nums,target,0,nums.length-1);
     }
 
-    int BinarySearch(List<Integer> nums, int target, int left, int right){
+    int BinarySearch(int[] nums, int target, int left, int right){
         if(left > right){
             return -1;
         }
         int mid = (left + right )/2;
-        if(nums.get(mid) == target) {
+        if(nums[mid] == target) {
             return mid;
-        }else if(nums.get(mid) > target) {
+        }else if(nums[mid] > target) {
             return BinarySearch(nums,target,left, mid-1);
         }else{
             return BinarySearch(nums,target,mid+1, right);
