@@ -17,7 +17,7 @@ public class BinarySearchDemo1 {
         System.out.println(binarySearchDemo1.search(nums,target));
     }
 
-    int search(int[] nums, int target) {
+    public int search(int[] nums, int target) {
         return BinarySearch(nums,target,0,nums.length-1);
     }
 
