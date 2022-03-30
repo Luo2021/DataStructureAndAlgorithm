@@ -34,7 +34,7 @@ public class PriorityQueueTest01 {
         PriorityQueue<Integer> queue = new PriorityQueue<>(k, new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
-                return o2-01;
+                return o2-o1;
             }
         });
         for(int i=0;i<arr.length;i++) {
