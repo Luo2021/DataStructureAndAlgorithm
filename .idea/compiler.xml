@@ -12,9 +12,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="algorithm" target="8" />
-      <module name="dataStructure" target="8" />
-      <module name="designPattern" target="8" />
+      <module name="algorithm" target="1.8" />
+      <module name="dataStructure" target="1.8" />
+      <module name="designPattern" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
