@@ -38,6 +38,7 @@ public class Demo17 {
     public void backtrack(List<String> combinations, Map<Character, String> phoneMap, String digits, int index, StringBuffer combination){
         if(index == digits.length()){
             combinations.add(combination.toString());
+            return;
         }else{
             char digit = digits.charAt(index);
             String letters = phoneMap.get(digit);

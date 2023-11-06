@@ -17,14 +17,15 @@ public class Demo9 {
     }
 
     public boolean isPalindrome(int x) {
-        if(x<0)
+        if(x<0) {
             return false;
+        }
         int res = x;
         int des = 0;
         while(res != 0){
-            int digst = res % 10;
+            int digest = res % 10;
             res = res / 10;
-            des = 10*des +digst;
+            des = 10*des +digest;
         }
         return des == x;
     }

@@ -15,8 +15,8 @@ package luo.li.other;
 public class Demo5 {
 
     public static void main(String[] args) {
-        String s = "ba";
-        System.out.println(new Demo5().longestPalindrome(s));
+        String s = "aaaaaabcddcba";
+        System.out.println(new Demo5().longestPalindrome2(s));
     }
 
     public String longestPalindrome(String s) {
@@ -65,5 +65,32 @@ public class Demo5 {
             }
         }
         return s.substring(begin, begin + maxLen);
+    }
+
+
+    int left;
+    int right;
+    public String longestPalindrome2(String s) {
+        if(s == null || s.length()==1){
+            return s;
+        }
+        for(int i=0;i<s.length()-1;i++){
+            centerExpland(s,i,i);
+            centerExpland(s,i,i+1);
+        }
+        return s.substring(left, right+1);
+    }
+
+    public void centerExpland(String s, int i, int j) {
+        while(i>=0 && j<s.length() && s.charAt(i) == s.charAt(j)) {
+            i--;
+            j++;
+        }
+        i++;
+        j--;
+        if(j-i > right-left) {
+            right = j;
+            left = i;
+        }
     }
 }

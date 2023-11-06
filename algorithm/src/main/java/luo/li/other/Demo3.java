@@ -16,13 +16,14 @@ import java.util.Set;
 public class Demo3 {
 
     public static void main(String[] args) {
-        String s = "abcabcdbb";
+        String s = "bacabcdbb";
         System.out.println(new Demo3().lengthOfLongestSubstring(s));
     }
 
     public int lengthOfLongestSubstring(String s) {
-        if(s == null || s.length() == 0)
+        if(s == null || s.length() == 0) {
             return 0;
+        }
         int maxLen = Integer.MIN_VALUE;
         int left = 0;
         int right = 0;

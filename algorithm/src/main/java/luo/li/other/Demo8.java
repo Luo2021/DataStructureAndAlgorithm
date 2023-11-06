@@ -21,28 +21,36 @@ public class Demo8 {
 
     public int myAtoi(String s) {
         //如果为空，直接返回0
-        if (s.length() == 0)
+        if (s.length() == 0) {
             return 0;
-        int index = 0;//遍历字符串中字符的位置
-        long res = 0;//最终结果
-        int sign = 1;//符号，1是正数，-1是负数，默认为正数
+        }
+        //遍历字符串中字符的位置
+        int index = 0;
+        //最终结果
+        long res = 0;
+        //符号，1是正数，-1是负数，默认为正数
+        int sign = 1;
         int length = s.length();
         // 过滤掉字符串前面的空格
-        while (index < length && s.charAt(index) == ' ')
+        while (index < length && s.charAt(index) == ' ') {
             index++;
-        if (index == length)
+        }
+        if (index == length) {
             return 0;
+        }
         //判断符号
-        if (s.charAt(index) == '-' || s.charAt(index) == '+')
+        if (s.charAt(index) == '-' || s.charAt(index) == '+') {
             sign = s.charAt(index++) == '+' ? 1 : -1;
+        }
 
         for (; index < length; index++) {
             //取出字符串中字符，然后转化为数字
             int digit = s.charAt(index) - '0';
             //按照题中的要求，读入下一个字符，直到到达下一个非数字字符或到达输入的结尾。
             //字符串的其余部分将被忽略。如果读取了非数字，后面的都要忽略
-            if (digit < 0 || digit > 9)
+            if (digit < 0 || digit > 9) {
                 break;
+            }
 
             res = res * 10 + digit;
 

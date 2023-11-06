@@ -29,7 +29,7 @@ public class Demo10 {
 
     public boolean isMatch(String s, String p) {
 
-        boolean table[][] = new boolean[s.length() + 1][p.length() + 1];
+        boolean[][]table = new boolean[s.length() + 1][p.length() + 1];
 
         table[0][0] = true;
 
@@ -57,11 +57,13 @@ public class Demo10 {
                 } else if (ch2 == '*') {
                     if(col > 1) {
                         if (table[row][col-2]) {
-                            table[row][col] = true; // * 前面的字符出现0次
+                            //前面的字符出现0次
+                            table[row][col] = true;
                         } else {
                             char prev = p.charAt(col-2);
                             if (prev== ch1 || prev == '.') {
-                                table[row][col] = table[row - 1][col]; // * 前面的字符出现多次
+                                //前面的字符出现多次
+                                table[row][col] = table[row - 1][col];
                             }
                         }
 

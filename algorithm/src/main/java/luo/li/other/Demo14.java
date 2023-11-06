@@ -8,6 +8,7 @@ package luo.li.other;
 public class Demo14 {
 
     public static void main(String[] args) {
+        System.out.println('a'-'A');
         String[] strs1 = {"flower","flow","flight"};
         System.out.println(new Demo14().longestCommonPrefix(strs1));
         String[] strs2 = {"dog","racecar","car"};
