@@ -1,4 +1,4 @@
-package BehavioralMode.Strategy;
+package BehavioralMode.strategy;
 
 /**
  * 减法策略

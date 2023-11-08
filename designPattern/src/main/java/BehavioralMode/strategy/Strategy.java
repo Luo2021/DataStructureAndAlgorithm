@@ -1,4 +1,4 @@
-package BehavioralMode.Strategy;
+package BehavioralMode.strategy;
 
 /**
  * 策略模式(行为型模式)：定义一系列算法，把他们封装起来，并且使它们可以相互替换
