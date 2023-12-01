@@ -1,20 +1,20 @@
-package luo.li.other;
+package luo.li.数学;
 
 /**
  * 字符串转换整数 (atoi)
  * @Author liluo
  * @create 2022/6/10 14:06
  */
-public class Demo8 {
+public class 字符串转换整数 {
     public static void main(String[] args) {
         String str1 = "42";
         String str2 = "   -42";
         String str3 = "4193 with words";
         String str4 = "9223372036854775808";
-        System.out.println(new Demo8().myAtoi(str1));
-        System.out.println(new Demo8().myAtoi(str2));
-        System.out.println(new Demo8().myAtoi(str3));
-        System.out.println(new Demo8().myAtoi(str4));
+        System.out.println(new 字符串转换整数().myAtoi(str1));
+        System.out.println(new 字符串转换整数().myAtoi(str2));
+        System.out.println(new 字符串转换整数().myAtoi(str3));
+        System.out.println(new 字符串转换整数().myAtoi(str4));
     }
 
     // 使用long类型

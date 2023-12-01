@@ -1,18 +1,18 @@
-package luo.li.other;
+package luo.li.数学;
 
 /**
  * 给你一个整数 x ，如果 x 是一个回文整数，返回 true ；否则，返回 false 。
  * @Author liluo
  * @create 2022/6/10 15:00
  */
-public class Demo9 {
+public class 判断是否是回文整数 {
     public static void main(String[] args) {
         int a1 = 121;
         int a2 = -121;
         int a3 = 123;
-        System.out.println(new Demo9().isPalindrome(a1));
-        System.out.println(new Demo9().isPalindrome(a2));
-        System.out.println(new Demo9().isPalindrome(a3));
+        System.out.println(new 判断是否是回文整数().isPalindrome(a1));
+        System.out.println(new 判断是否是回文整数().isPalindrome(a2));
+        System.out.println(new 判断是否是回文整数().isPalindrome(a3));
 
     }
 
